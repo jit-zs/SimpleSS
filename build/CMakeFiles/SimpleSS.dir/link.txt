@@ -1,2 +1,0 @@
-/usr/bin/ar qc libSimpleSS.a CMakeFiles/SimpleSS.dir/src/Lexer.cpp.o CMakeFiles/SimpleSS.dir/src/Parser.cpp.o CMakeFiles/SimpleSS.dir/src/StyleSheet.cpp.o
-/usr/bin/ranlib libSimpleSS.a
