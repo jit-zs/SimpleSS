@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g -Xlinker --dependency-file=CMakeFiles/SimpleSS_dev.dir/link.d CMakeFiles/SimpleSS_dev.dir/dev/main.cpp.o -o SimpleSS_dev  libSimpleSS.a

@@ -1,6 +1,0 @@
-/home/joe/Documents/Projects/SimpleSS/build/CMakeFiles/SimpleSS.dir
-/home/joe/Documents/Projects/SimpleSS/build/CMakeFiles/SimpleSS_dev.dir
-/home/joe/Documents/Projects/SimpleSS/build/CMakeFiles/edit_cache.dir
-/home/joe/Documents/Projects/SimpleSS/build/CMakeFiles/rebuild_cache.dir
-/home/joe/Documents/Projects/SimpleSS/build/_deps/magic_enum-build/CMakeFiles/edit_cache.dir
-/home/joe/Documents/Projects/SimpleSS/build/_deps/magic_enum-build/CMakeFiles/rebuild_cache.dir
