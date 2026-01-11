@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
-#include <SimpleSS/priv/Lexer.hpp>
 #include <SimpleSS/SimpleSS.hpp>
+#include <SimpleSS/priv/Lexer.hpp>
 #include <magic_enum/magic_enum.hpp>
 std::ostream& operator<<(std::ostream& stream, const simss::Token& token) {
     stream << magic_enum::enum_name(token.type) << "[" << token.line << ", " << token.column << "] = " << "\"" << token.value << "\"";
@@ -20,7 +20,7 @@ int main() {
     std::cout << "name.subname.subbername>FontSize: " << sheet.getValue("name.subname.subbername", "FontSize").asNumber() << std::endl;
     std::cout << "name.subname.subbername|state>FontSize: " << sheet.getValue("name.subname.subbername|state", "FontSize").asNumber() << std::endl;
     simss::Value::Color color = sheet.getValue("name", "Color").asColor();
-
+    std::cout << "nonexistent_name>FontSize: " << sheet.getValue("nonexistent_name", "FontSize").asNumber() << std::endl;
     std::cout << "name>Color: " << (int)color[0] << ", " << (int)color[1] << ", " << (int)color[2] << ", " << (int)color[3] << std::endl;
     return 0;
 }

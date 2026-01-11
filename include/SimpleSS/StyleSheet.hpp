@@ -45,12 +45,13 @@ namespace simss {
                 else
                     name.erase(name.begin() + name.find('|'), name.end());
             }
-
+            
             while (std::count(name.begin(), name.end(), '.')) {
                 layers.push_back(name);
                 name.erase(name.begin() + name.find_last_of('.'), name.end());
             }
             layers.push_back(name);
+            layers.push_back("");
 
             for (const auto& layer : layers) {
                 if (mStyles.count(layer) && mStyles.at(layer).count(value))
