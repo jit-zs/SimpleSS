@@ -9,7 +9,7 @@ std::ostream& operator<<(std::ostream& stream, const simss::Token& token) {
 }
 int main() {
 
-    auto result = simss::loadFromFile("example.sss");
+    auto result = simss::loadFromFile("example.simss");
     if (!result) {
         for (const auto& err : result.getErrors()) std::cout << err << std::endl;
         return 1;
