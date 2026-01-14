@@ -56,7 +56,7 @@ namespace simss {
             return std::holds_alternative<NumberLiteral>(mValue) ? std::get<NumberLiteral>(mValue) : fallback;
         }
         std::string asString(const std::string& fallback = "") const {
-            return std::get<std::string>(mValue);
+            return std::holds_alternative<std::string>(mValue) ? std::get<std::string>(mValue) : fallback;
         }
         bool asBool(bool fallback = false) const {
             return std::holds_alternative<bool>(mValue) ? std::get<bool>(mValue) : fallback;
