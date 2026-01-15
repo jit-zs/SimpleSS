@@ -4,6 +4,8 @@
 #include <ranges>
 #include <stack>
 
+
+
 namespace simss {
 
 
@@ -114,7 +116,7 @@ namespace simss {
                 std::string name = currentToken().value;
                 it++;
                 if (valid() && currentToken().type == Token::Type::State) {
-                    name.append("->");
+                    name.append("|");
                     name.append(currentToken().value);
                     it++;
                 }
@@ -132,9 +134,6 @@ namespace simss {
             else {
                 errors.push_back("ERR: Invalid token" + lineAndColumn(currentToken()));
             }
-
-
-
             it++;
         }
         return { sheet, errors };
