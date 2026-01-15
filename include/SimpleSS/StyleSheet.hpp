@@ -28,7 +28,7 @@ namespace simss {
         const Style& getStyle(const std::string& style) const {
             return mStyles.at(style);
         }
-        const Value& getValue(const std::string& object, const std::string& value, const Value::ValueVariant& _default = std::monostate()) const {
+        Value getValue(const std::string& object, const std::string& value, const Value::ValueVariant& _default = std::monostate()) const {
             return getNearestValue(object, value, _default);
         }
     private:
@@ -36,7 +36,7 @@ namespace simss {
         /// @param name 
         /// @param value 
         /// @returns A const reference to the value or a null varian 
-        const Value& getNearestValue(std::string name, const std::string& value, const Value::ValueVariant& _default = std::monostate()) const {
+        Value getNearestValue(std::string name, const std::string& value, const Value::ValueVariant& _default = std::monostate()) const {
             std::vector<std::string> layers;
 
             if (std::count(name.begin(), name.end(), '|')) {
@@ -45,7 +45,7 @@ namespace simss {
                 else
                     name.erase(name.begin() + name.find('|'), name.end());
             }
-            
+
             while (std::count(name.begin(), name.end(), '.')) {
                 layers.push_back(name);
                 name.erase(name.begin() + name.find_last_of('.'), name.end());
